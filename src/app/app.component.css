@@ -1,0 +1,121 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "hero-img hero-img news"
+        "main-title main-description news"
+        "top-article-01 top-article-02 top-article-03";
+    gap: 22px;
+}
+.hero-img{
+    grid-area: hero-img;
+}
+.news{
+    grid-area: news;
+    background-color: var(--very-dark-blue);
+    padding: 1rem;
+}
+.main-title{
+    grid-area: main-title;
+    font-size: 1.5rem;
+    font-weight: 650;
+}
+.main-description{
+    display: grid;
+    grid-area: main-description;
+}
+.top-article-01{
+    grid-area: top-article-01;
+}
+.top-article-02{
+    grid-area: top-article-02;
+}
+.top-article-03{
+    grid-area: top-article-03;
+}
+p{
+    color: var(--dark-grayish-blue);
+    font-size: 0.8rem;
+    line-height: 1.35rem;
+    font-weight: 480;
+    margin-bottom: 1.4rem;
+}
+h2{
+    color: var(--soft-orange);
+    letter-spacing: 1px;
+    font-size: 1.9rem;
+    margin-top: 0.4rem
+}
+h4{
+    margin-top: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+h4 a{
+    color: var(--off-white);
+}
+h4:hover a{
+    color: var(--soft-orange);
+    cursor: pointer;
+}
+hr{
+    height: 1px;
+    background-color: var(--dark-grayish-blue);
+    border: none;
+}
+button{
+    border: none;
+    color: var(--very-dark-blue);
+    background-color: var(--soft-red);
+    font-weight: 650;
+    font-size: 0.8rem;
+    padding: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    align-self: flex-end;
+    width: fit-content;
+    cursor: pointer;
+}
+button:hover{
+    color: var(--off-white);
+    background-color: var(--very-dark-blue);
+}
+.top-articles{
+    display: flex;
+    column-gap: 20px;
+}
+.top-articles img{
+    /* height: 115px; */
+    width: 105px;
+    object-fit: cover;
+}
+h3{
+    color: var(--soft-red);
+    font-size: 1.8rem;
+    font-weight: 650;
+}
+.top-articles h4 a{
+    color: var(--very-dark-blue);
+}
+.top-articles h4{
+    margin-top: 0.4rem;
+}
+.top-articles h4 a:hover{
+    color: var(--soft-red);
+}
+
+@media(max-width:885px){
+    main{
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+            "hero-img"
+            "main-title"
+            "main-description"
+            "news"
+            "top-article-01"
+            "top-article-02"
+            "top-article-03";
+    }
+}
+
